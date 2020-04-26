@@ -43,7 +43,7 @@ $max_date = date("Y-m-d"); // max date in input for query, set equal to today
 /**
 *	Check isset date_to_query variable by user
 */
-if($_GET['date_to_query']){
+if(isset($_GET['date_to_query'])){
 	$date_to_query = $_GET['date_to_query']; // YES -> TAKE A GET VARIABLE
 	$date_to_query = str_replace('-', '/', $date_to_query); // replace '-' to '/'
 	$array = explode("/", $date_to_query); // make a array
